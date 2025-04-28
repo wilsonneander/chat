@@ -1,0 +1,20 @@
+.message--self {
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 10px 10px 0 10px;
+    align-self: flex-end;
+}
+
+.message--other {
+    background-color: #333;
+    color: #f2f2f2;
+    border-radius: 0 10px 10px 10px;
+    align-self: flex-start;
+}
+
+.message--sender {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: cadetblue;
+}
