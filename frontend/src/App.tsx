@@ -1,6 +1,18 @@
+import ChatCard from "./components/ChatCard/chat-card";
 import Login from "./components/Login/login";
-import "./styles/global.css";
+import { useState } from "react";
 
 export default function App() {
-  return <Login />;
+  const [userLogged, setUserLogged] = useState(localStorage.getItem("userLogged"));
+
+  const handleLogin = (userName: string) => {
+    localStorage.setItem("userLogged", userName);
+    setUserLogged(userName); // troca a tela
+  };
+
+  return (
+    <>
+      {userLogged ? <ChatCard /> : <Login onLogin={handleLogin} />}
+    </>
+  );
 }
